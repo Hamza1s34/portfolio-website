@@ -1,0 +1,210 @@
+/**
+ * Terms of Service Page Styles - terms.css
+ * Clean and professional styling for the terms of service page
+ */
+
+/*--------------------------------------------------------------
+# Terms Section
+--------------------------------------------------------------*/
+.terms-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 15% 15%, rgba(0, 200, 150, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 85% 85%, rgba(61, 90, 254, 0.05) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+.terms-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--dark-card);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--dark-border);
+    position: relative;
+}
+
+.terms-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.terms-intro {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.terms-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.terms-section-block {
+    margin-bottom: var(--spacing-xl);
+}
+
+.terms-section-block:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section-block h2 {
+    color: var(--text-highlight);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.terms-section-block h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius-sm);
+}
+
+.terms-section-block h3 {
+    color: var(--text-primary);
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+    font-size: 1.4rem;
+}
+
+.terms-section-block p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.terms-section-block ul {
+    list-style: none;
+    padding-left: var(--spacing-md);
+}
+
+.terms-section-block ul li {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.terms-section-block ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.terms-section-block a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+.terms-section-block a:hover {
+    color: var(--secondary-color);
+}
+
+.terms-footer {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--dark-border);
+    text-align: center;
+}
+
+.terms-footer p {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@media screen and (max-width: 992px) {
+    .terms-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .terms-section-block h2 {
+        font-size: 1.6rem;
+    }
+    
+    .terms-section-block h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .terms-section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .terms-content {
+        padding: var(--spacing-md);
+    }
+    
+    .terms-section-block h2 {
+        font-size: 1.4rem;
+    }
+    
+    .terms-section-block h3 {
+        font-size: 1.2rem;
+    }
+    
+    .terms-intro p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .terms-section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .terms-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .terms-section-block h2 {
+        font-size: 1.3rem;
+    }
+    
+    .terms-section-block h3 {
+        font-size: 1.1rem;
+    }
+    
+    .terms-section-block ul {
+        padding-left: var(--spacing-sm);
+    }
+    
+    .terms-section-block ul li {
+        padding-left: var(--spacing-sm);
+    }
+} 
